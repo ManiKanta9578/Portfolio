@@ -2,6 +2,7 @@
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
+import { animate, motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
@@ -36,6 +37,7 @@ const projectsData = [
 const ProjectSection = () => {
   const [tag, setTag] = useState("All");
   const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
@@ -44,6 +46,11 @@ const ProjectSection = () => {
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
   );
+
+  const cardVariants = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
 
   return (
     <section id="projects">
@@ -69,14 +76,21 @@ const ProjectSection = () => {
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            imgUrl={project.image}
-            gitUrl={project.gitUrl}
-            previewUrl={project.previewUrl}
-          />
+          <motion.li
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: index * 0.4 }}
+          >
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              imgUrl={project.image}
+              gitUrl={project.gitUrl}
+              previewUrl={project.previewUrl}
+            />
+          </motion.li>
         ))}
       </ul>
     </section>
