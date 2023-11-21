@@ -9,6 +9,10 @@ import TabButton from "./TabButton";
 
 const navLinks = [
   {
+    title: "Home",
+    path: "/",
+  },
+  {
     title: "About",
     path: "#about",
   },
@@ -32,6 +36,7 @@ const Navbar = () => {
   const handleTabChange = (id) => {
     startTransition(() => {
       setTab(id);
+      setOpenNavbar(false);
     });
   };
 
@@ -73,27 +78,41 @@ const Navbar = () => {
           )}
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
-        <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            <TabButton
-              selectTab={() => handleTabChange("about")}
-              active={tab === "about"}
-            >
-            <Link href={"#about"} className="text-lg">About</Link>
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("projects")}
-              active={tab === "projects"}
-            >
-              <Link href={"#projects"} className="text-lg">Projects</Link>
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("contact")}
-              active={tab === "contact"}
-            >
-              <Link href={"#contact"} className="text-lg">Contact</Link>
-            </TabButton>
+          <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+            <Link href={"/"} className="text-lg">
+              <TabButton
+                selectTab={() => handleTabChange("home")}
+                active={tab === "home"}
+              >
+                Home
+              </TabButton>
+            </Link>
+            <Link href={"#about"} className="text-lg">
+              <TabButton
+                selectTab={() => handleTabChange("about")}
+                active={tab === "about"}
+              >
+                About
+              </TabButton>
+            </Link>
+            <Link href={"#projects"} className="text-lg">
+              <TabButton
+                selectTab={() => handleTabChange("projects")}
+                active={tab === "projects"}
+              >
+                Projects
+              </TabButton>
+            </Link>
+            <Link href={"#contact"} className="text-lg">
+              <TabButton
+                selectTab={() => handleTabChange("contact")}
+                active={tab === "contact"}
+              >
+                Contact
+              </TabButton>
+            </Link>
           </div>
-        {/*  <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          {/*  <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
              {navLinks.map((link, index) => (
               <li key={index}>
                 <NavLink href={link.path} title={link.title} />
