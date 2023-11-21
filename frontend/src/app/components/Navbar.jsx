@@ -9,12 +9,12 @@ import TabButton from "./TabButton";
 
 const navLinks = [
   {
-    title: "Home",
-    path: "/",
-  },
-  {
     title: "About",
     path: "#about",
+  },
+  {
+    title: "Experience",
+    path: "#experience",
   },
   {
     title: "Projects",
@@ -79,20 +79,20 @@ const Navbar = () => {
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            <Link href={"/"} className="text-lg">
-              <TabButton
-                selectTab={() => handleTabChange("home")}
-                active={tab === "home"}
-              >
-                Home
-              </TabButton>
-            </Link>
             <Link href={"#about"} className="text-lg">
               <TabButton
                 selectTab={() => handleTabChange("about")}
                 active={tab === "about"}
               >
                 About
+              </TabButton>
+            </Link>
+            <Link href={"#experience"} className="text-lg">
+              <TabButton
+                selectTab={() => handleTabChange("experience")}
+                active={tab === "experience"}
+              >
+                Experience
               </TabButton>
             </Link>
             <Link href={"#projects"} className="text-lg">

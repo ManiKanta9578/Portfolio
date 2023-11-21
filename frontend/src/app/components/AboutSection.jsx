@@ -57,7 +57,8 @@ const AboutSection = () => {
           width={500}
           height={500}
           className="object-cover rounded-md"
-          layout="responsive"
+          // layout="responsive"
+          alt="My Imahe"
         />
         <div className="mt-9 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
