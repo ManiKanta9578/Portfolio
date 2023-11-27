@@ -20,7 +20,7 @@ const Herosection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold h-28 sm:h-48">
+          <h1 className="text-light mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold h-28 sm:h-48">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m
             </span>
@@ -50,11 +50,13 @@ const Herosection = () => {
             something amazing together! Explore my projects and get in touch.
           </p>
           <div>
-            <Link href={"#contact"} className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 via-secondary-500 to-white hover:bg-slate-200 text-white">
-              Hire Me
+            <Link href={"#contact"}>
+              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 via-secondary-500 to-light hover:bg-slate-200 text-light">
+                Hire Me
+              </button>
             </Link>
             <button
-              className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 via-secondary-500 to-white hover:bg-slate-800 text-white mt-3"
+              className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 via-secondary-500 to-light hover:bg-slate-800 text-light mt-3"
               onClick={handleDownload}
             >
               <a

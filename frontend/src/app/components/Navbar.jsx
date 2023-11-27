@@ -30,29 +30,31 @@ const MotionLink = motion(Link);
 
 const Navbar = () => {
   const [openNavbar, setOpenNavbar] = useState(false);
+  console.log(openNavbar,"openNavbar")
   const [tab, setTab] = useState("");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
     startTransition(() => {
       setTab(id);
-      setOpenNavbar(false);
     });
+    setOpenNavbar(false);
   };
+  
 
   return (
-    <nav className="container fixed mx-auto border border-[#33353F] top-0 right-0 left-0 z-10 bg-[#121212] bg-opacity-100">
+    <nav className=" w-full fixed mx-auto border border-[#33353F] top-0 right-0 left-0 z-10 bg-[#121212] bg-opacity-100">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-10 py-2">
         <MotionLink
           href={"/"}
-          className="w-12 h-12 text-white text-2xl font-bold border-white border  rounded-full flex items-center justify-center"
+          className="w-12 h-12 text-light text-2xl font-bold border-light border  rounded-full flex items-center justify-center"
           whileHover={{
             backgroundColor: [
               "#121212",
-              "rgba(131,58,180,1)",
-              "rgba(253,29,29,1)",
-              "rgba(252,176,69,1)",
-              "rgba(131,58,180,1)",
+              "#233878",
+              "rgba(255, 218, 185,1)",
+              "rgba(50, 205, 50,1)",
+              "rgba(125, 249, 255,1)",
               "#121212",
             ],
             transition: { duration: 1, repeat: Infinity },
@@ -64,14 +66,14 @@ const Navbar = () => {
           {!openNavbar ? (
             <button
               onClick={() => setOpenNavbar(true)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-light hover:border-light"
             >
               <Bars3Icon className="h-5 w-5" />
             </button>
           ) : (
             <button
               onClick={() => setOpenNavbar(false)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-light hover:border-light"
             >
               <XMarkIcon className="h-5 w-5" />
             </button>

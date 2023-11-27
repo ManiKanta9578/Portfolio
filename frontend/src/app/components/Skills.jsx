@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Skill = ({ name, x, y }) => {
   return (
     <motion.div
-      className="flex items-center justify-center rounded-full font-normal text-white sm:bg-white sm:text-black sm:font-medium sm:px-2 sm:py-1 md:px-2  text-sm lg:text-lg lg:py-1 lg:px-2 md:text-lg sm:text-base  shadow-white cursor-pointer absolute"
+      className="flex items-center justify-center rounded-full font-normal text-light sm:bg-light sm:text-dark sm:font-medium sm:px-2 sm:py-1 md:px-2  text-sm lg:text-lg lg:py-1 lg:px-2 md:text-lg sm:text-base  shadow-light cursor-pointer absolute"
       whileHover={{ scale: 1.05 }}
       initial={{ x: 0, y: 0 }}
       whileInView={{ x: x, y: y }}
@@ -19,17 +19,16 @@ const Skill = ({ name, x, y }) => {
 const Skills = () => {
   return (
     <section className="flex flex-col items-center justify-center">
-      <h2 className="font-bold text-4xl w-full text-center md:text-4xl text-white mb-5">
+      <h2 className="font-bold text-4xl w-full text-center md:text-6xl text-light mb-5">
         Skills
       </h2>
       <div
-        className="lg:w-[60vw] w-full h-[50vh] lg:h-screen md:h-[100vh] sm:h-[100vh]  relative flex items-center justify-center rounded-full bg-circularDark
+        className="lg:w-[80vw] w-full h-[50vh] lg:h-screen md:h-[100vh] sm:h-[100vh]  relative flex items-center justify-center rounded-full bg-circularDark
       lg:bg-circularDarkLg md:bg-circularDarkMd sm:bg-circularDarkSm xs:circularDarkXs"
       >
         <motion.div
-          className="flex items-center justify-center rounded-full font-semibold bg-white text-black p-2 shadow-white cursor-pointer lg:p-6 md:p-4 xs:p-2 text-sm sm:text-lg sm:p-3 "
+          className="flex items-center justify-center rounded-full font-semibold bg-light text-dark p-2 shadow-light cursor-pointer lg:p-6 md:p-4 xs:p-2 text-sm sm:text-lg sm:p-3 "
           whileHover={{ scale: 1.05 }}
-          viewport={{ once: true }}
         >
           Web
         </motion.div>

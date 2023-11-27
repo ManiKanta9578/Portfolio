@@ -39,7 +39,7 @@ const EmailSection = () => {
     >
       {/* <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div> */}
       <div>
-        <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
+        <h5 className="text-xl font-bold text-light my-2">Let's Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           I'm currently looking for an oppurtunities, my inbox is alway open.
           Whether you have a question or just want to say hi, I'll try my best
@@ -69,7 +69,7 @@ const EmailSection = () => {
           <div className="mb-6">
             <label
               htmlFor="email"
-              className="text-white block mb-2 text-sm font-medium"
+              className="text-light block mb-2 text-sm font-medium"
             >
               Your email
             </label>
@@ -85,7 +85,7 @@ const EmailSection = () => {
           <div className="mb-6">
             <label
               htmlFor="subject"
-              className="text-white block mb-2 text-sm font-medium"
+              className="text-light block mb-2 text-sm font-medium"
             >
               Subject
             </label>
@@ -101,7 +101,7 @@ const EmailSection = () => {
           <div className="mb-6">
             <label
               htmlFor="message"
-              className="text-white block mb-2 text-sm font-medium"
+              className="text-light block mb-2 text-sm font-medium"
             >
               Message
             </label>
@@ -114,7 +114,7 @@ const EmailSection = () => {
           </div>
           <button
             type="submit"
-            className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 rounded-lg w-full"
+            className="bg-primary-500 hover:bg-primary-600 text-light font-medium py-2.5 rounded-lg w-full"
           >
             Send Message
           </button>

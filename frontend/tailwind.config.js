@@ -10,8 +10,8 @@ module.exports = {
     extend: {
       colors: {
         ...colors,
-        dark: "#1b1b1b",
-        light: "#f5f5f5",
+        dark: colors.black,
+        light: colors.white,
         primary: colors.green,
         primaryDark: "#58E6D9",
         secondary: colors.blue,
@@ -29,9 +29,9 @@ module.exports = {
         circularLightSm:
           "repeating-radial-gradient(rgba(0,0,0,0.4) 2px, #f5f5f5 5px, #f5f5f5 40px)",
         circularDark:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 1px, #121212 3px, #121212 40px)",
+          "repeating-radial-gradient(rgba(255,255,255,0.5) 1px, #121212 3px, #121212 30px)",
         circularDarkLg:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px, #121212 8px, #121212 85px)",
+          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px, #121212 8px, #121212 95px)",
         circularDarkMd:
           "repeating-radial-gradient(rgba(255,255,255,0.5) 2px, #121212 8px, #121212 80px)",
         circularDarkSm:
