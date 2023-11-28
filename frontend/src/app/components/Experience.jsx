@@ -22,7 +22,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
   }, [isMobile]);
 
   return (
-    <div className="flex flex-col text-light">
+    <div className="flex flex-col dark:text-light text-dark">
       <h3 className="capitalize font-bold text-lg lg:text-2xl">
         {position} &nbsp;
         <a
@@ -69,7 +69,7 @@ const ExpDetails = [
     work: "Build responsive and user-friendly interfaces with React.js. Manage state using React's tools for optimal performance Perform CRUD operations and optimize database performance.Implement and maintain database security measures.Communicate effectively for project understanding and delivery.Develop server-side logic using Node.js and Express.js.",
   },
   {
-    position: "IT Recruiter",
+    position: "Associate-TA",
     company: "Primus Global Technologies Pvt Ltd",
     companyLink: "https://primusglobal.com/",
     time: "Aug,2021 to Aug,2022",
@@ -92,7 +92,7 @@ const Experience = () => {
       id="experience"
       className="flex flex-col items-center justify-center"
     >
-      <h2 className="font-bold text-4xl w-full text-center md:text-6xl text-light mb-5 mt-24">
+      <h2 className="font-bold text-4xl w-full text-center md:text-6xl dark:text-light text-dark mb-5 mt-24">
         Experience
       </h2>
 

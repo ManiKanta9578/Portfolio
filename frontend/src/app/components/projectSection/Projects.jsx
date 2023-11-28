@@ -50,17 +50,15 @@ const projectsData = [
 const Projects = () => {
   return (
     <section className="w-full" id="projects">
-      <div>
-        <Head>
-          <title>Projects</title>
-        </Head>
-      </div>
       <div className="text-light">
-        <h2 className="text-4xl md:text-6xl lg:text-8xl text-center font-semibold mt-9 mb-9">
+        <h2 className="mb-16 mt-16 lg:!text-7xl sm:mb-8 sm:!text-6xl text-4xl text-center">
           Imagination Trump <br /> Knowledge!
         </h2>
         {projectsData.map((project, index) => (
-          <div key={index} className="grid grid-cols-12 gap-6 md:gap-8 lg:gap-12">
+          <div
+            key={index}
+            className="grid grid-cols-12 gap-y-12 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 gap-x-0 md:gap-8 lg:gap-12"
+          >
             <div className="col-span-12 md:col-span-12 lg:col-span-12">
               <FeaturedProject
                 type={project.reserveBus.type}
@@ -102,4 +100,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

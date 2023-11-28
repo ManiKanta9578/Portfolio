@@ -5,7 +5,14 @@ import { motion } from "framer-motion";
 const Skill = ({ name, x, y }) => {
   return (
     <motion.div
-      className="flex items-center justify-center rounded-full font-normal text-light sm:bg-light sm:text-dark sm:font-medium sm:px-2 sm:py-1 md:px-2  text-sm lg:text-lg lg:py-1 lg:px-2 md:text-lg sm:text-base  shadow-light cursor-pointer absolute"
+      className="flex items-center justify-center rounded-full font-normal shadow-light cursor-pointer absolute 
+      
+      md:bg-light md:dark:bg-dark 
+      lg:dark:bg-light lg:bg-dark 
+      xl:dark:bg-light  xl:bg-dark 
+      dark:text-light text-dark
+      lg:text-light lg:dark:text-dark
+      px-0 py-0 lg:px-3 lg:py-2"
       whileHover={{ scale: 1.05 }}
       initial={{ x: 0, y: 0 }}
       whileInView={{ x: x, y: y }}
@@ -19,15 +26,19 @@ const Skill = ({ name, x, y }) => {
 const Skills = () => {
   return (
     <section className="flex flex-col items-center justify-center">
-      <h2 className="font-bold text-4xl w-full text-center md:text-6xl text-light mb-5">
+      <h2 className="font-bold text-4xl w-full text-center md:text-6xl text-dark dark:text-light mb-5">
         Skills
       </h2>
       <div
-        className="lg:w-[80vw] w-full h-[50vh] lg:h-screen md:h-[100vh] sm:h-[100vh]  relative flex items-center justify-center rounded-full bg-circularDark
-      lg:bg-circularDarkLg md:bg-circularDarkMd sm:bg-circularDarkSm xs:circularDarkXs"
+        className="lg:w-[80vw] w-full h-[50vh] lg:h-screen md:h-[100vh] sm:h-[100vh]  relative flex items-center justify-center rounded-full 
+        bg-circularLight dark:bg-circularDark 
+        lg:dark:bg-circularDarkLg lg:bg-circularLightLg
+        md:dark:bg-circularDarkMd md:bg-circularLightMd
+        sm:dark:bg-circularDarkSm sm:bg-circularLightSm
+        xs:circularDarkXs"
       >
         <motion.div
-          className="flex items-center justify-center rounded-full font-semibold bg-light text-dark p-2 shadow-light cursor-pointer lg:p-6 md:p-4 xs:p-2 text-sm sm:text-lg sm:p-3 "
+          className="flex items-center justify-center rounded-full font-semibold  p-2 shadow-light bg-dark dark:bg-light text-light dark:text-dark cursor-pointer lg:p-6 md:p-4 xs:p-2 text-sm sm:text-lg sm:p-3 "
           whileHover={{ scale: 1.05 }}
         >
           Web

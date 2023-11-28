@@ -34,12 +34,12 @@ const AchievementsSection = () => {
             key={index}
             className="rounded-md py-4 px-3 text-center flex flex-col"
           >
-            <h2 className="text-light inline-block text-2xl font-bold md:text-4xl sm:text-4xl xs:text-4xl">
+            <h2 className="text-dark dark:text-light inline-block text-2xl font-bold md:text-4xl sm:text-4xl xs:text-4xl">
               {achievement.prefix}
               <CountUp start={0} end={achievement.value} duration={3} />
               {achievement.postfix}
             </h2>
-            <p className="text-gray-400 inline-block text-sm font-bold md:text-2xl sm:text-1xl xs:text-4xl">{achievement.metric}</p>
+            <p className="dark:text-gray-400 text-gray-600 inline-block text-sm font-bold md:text-2xl sm:text-1xl xs:text-4xl">{achievement.metric}</p>
           </div>
         ))}
       </div>

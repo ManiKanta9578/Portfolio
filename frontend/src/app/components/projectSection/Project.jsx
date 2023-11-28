@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import React from "react";
 
 const Project = ({
@@ -12,36 +13,44 @@ const Project = ({
   gitIcon,
 }) => {
   return (
-    <section className="w-full h-[60vh] grid grid-rows-6 justify-center rounded-3xl border border-solid border-light bg-dark shadow-2xl p-4 md:p-8 lg:p-10">
+    <section className="w-full h-[60vh] flex flex-col relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-6 lg:p-8 dark:bg-dark dark:border-light sm:rounded-2xl sm:rounded-br-2xl text-dark dark:text-light border-r-8 border-b-8">
       <Link
         href={previewUrl}
         target="_blank"
-        className="row-span-4 w-full md:w-1/2 lg:w-full cursor-pointer overflow-hidden rounded-lg flex items-center justify-center"
+        className="w-full h-full cursor-pointer overflow-hidden rounded-lg mb-6 lg:mb-0 lg:mr-6"
       >
-        <Image
-          src={img}
-          alt={title}
-          className="h-auto w-full rounded-lg"
-          width={500}
-          height={500}
-        />
+        <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
+          <Image
+            src={img}
+            alt={title}
+            className="h-full w-full rounded-lg"
+            width={500}
+            height={500}
+          />
+        </motion.div>
       </Link>
 
-      <div className="row-span-2 w-full md:w-full flex flex-col mt-4 lg:mt-0 ">
-        <span className="text-primary-300 font-medium text-xl">{type}</span>
+      <div className="w-full h-full lg:h-full flex flex-col items-start justify-end">
+        <span className="text-primary-300 font-medium text-lg lg:text-xl">
+          {type}
+        </span>
         <Link
           href={previewUrl}
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-2xl font-bold">{title}</h2>
+          <h2 className="my-2 w-full text-left text-xl md:text-xl lg:text-2xl xl:text-2xl font-bold">
+            {title}
+          </h2>
         </Link>
-        {/* <p className="my-2 font-medium text-base text-light"> {summary} </p> */}
-        <div className="mt-2 lg:mt-4 flex items-center justify-between">
+        {/* {summary && (
+          <p className="my-2 font-medium text-base lg:text-light">{summary}</p>
+        )} */}
+        <div className="w-full mt-2 flex flex-row items-center justify-between">
           <Link
             href={previewUrl}
             target="_blank"
-            className="rounded-lg text-light text-base lg:text-lg font-semibold underline"
+            className="rounded-lg text-dark dark:text-light underline text-lg md:text-lg lg:text-xl xl:text-xl font-semibold "
           >
             Visit
           </Link>

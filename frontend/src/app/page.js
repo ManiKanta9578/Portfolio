@@ -1,3 +1,5 @@
+"use client"
+import { ThemeProvider } from "next-themes";
 import AboutSection from "./components/AboutSection";
 import AchievementsSection from "./components/AchievementsSection";
 import EmailSection from "./components/EmailSection";
@@ -12,20 +14,22 @@ import Skills from "./components/Skills";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212] mx-auto px-12 py-4">
-      {/* <Navbar1 /> */}
-      <Navbar />
-      <div className="container mt-24 mx-auto px-4">
-        <Herosection />
-        {/* <AchievementsSection /> */}
-        <AboutSection />
-        <Skills />
-        <Experience />
-        {/* <ProjectSection /> */}
-        <Projects />
-        <EmailSection />
-      </div>
-      <Footer />
-    </main>
+    <ThemeProvider enableSystem={true} attribute="class">
+      <main className="flex min-h-screen flex-col bg-light dark:bg-dark mx-auto px-12 py-4">
+        <Navbar1 />
+        {/* <Navbar /> */}
+        <div className="container mt-24 mx-auto px-4">
+          <Herosection />
+          {/* <AchievementsSection /> */}
+          <AboutSection />
+          <Skills />
+          <Experience />
+          {/* <ProjectSection /> */}
+          <Projects />
+          <EmailSection />
+        </div>
+        <Footer />
+      </main>
+    </ThemeProvider>
   );
 }
