@@ -1,19 +1,30 @@
-"use client";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import useThemeSwitcher from "./hooks/useThemeSwitcher";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
 
 const CustomLink = ({ href, title, className = "" }) => {
   return (
-    <Link href={href} className={`${className} relative group:`}>
-      {title}
-      <span className="h-[1px] inline-block w-0 bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300">
-        &#160;
-      </span>
-    </Link>
+    <motion.div
+      whileHover={{ scale: 1.1 }} // You can customize the hover animation here
+      className={`${className} relative group`}
+    >
+      <Link href={href} className="relative group flex items-center">
+        {title}
+        <motion.span
+          initial={{ width: 0 }}
+          animate={{ width: "100%" }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
+          &#160;
+        </motion.span>
+      </Link>
+    </motion.div>
   );
 };
+
+const MotionLink = motion(Link);
 
 const Navbar1 = () => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -27,21 +38,50 @@ const Navbar1 = () => {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <header className="fixed w-full px-32 py-8 font-medium text-dark dark:text-light flex flex-row items-center justify-between">
-      <nav>
-        <CustomLink href={"/"} title="Home" className="mr-4" />
-        <CustomLink href={"#about"} title="About" className="mx-4" />
-        <CustomLink href={"#projects"} title="Projects" className="mx-4" />
+    <section className="w-full fixed z-10 font-medium text-dark dark:text-light dark:bg-dark top-0 bg-light flex flex-col md:flex-row items-center justify-between px-4 md:px-8 lg:px-16 py-2">
+      <nav className="mb-4 md:mb-0">
+        <MotionLink
+          href={"/"}
+          className="w-12 h-12 dark:text-light text-dark text-2xl font-bold dark:border-light border-dark border rounded-full flex items-center justify-center mb-4 md:mb-0 md:mr-4"
+          whileHover={{
+            backgroundColor: [
+              "#121212",
+              "#233878",
+              "rgba(255, 218, 185,1)",
+              "rgba(50, 205, 50,1)",
+              "rgba(125, 249, 255,1)",
+              "#121212",
+            ],
+            transition: { duration: 1, repeat: Infinity },
+          }}
+        >
+          MK
+        </MotionLink>
       </nav>
-      <h2>MK</h2>
-      <nav>
-        {currentTheme === "dark" ? (
-          <button onClick={() => setTheme("light")}>Light</button>
-        ) : (
-          <button onClick={() => setTheme("dark")}>Dark</button>
-        )}
+      <nav className="flex flex-row items-center mr-10">
+        <CustomLink href={"/"} title="Home" className="mb-2 md:mb-0 md:mr-4" />
+        <CustomLink
+          href={"#about"}
+          title="About"
+          className="mb-2 md:mb-0 md:mx-4"
+        />
+        <CustomLink
+          href={"#projects"}
+          title="Projects"
+          className="mb-2 md:mb-0 md:mx-4"
+        />
+        <button
+          onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
+          className="md:ml-4"
+        >
+          {currentTheme === "dark" ? (
+            <Image src="/images/sun.svg" alt="logo" height={40} width={40} />
+          ) : (
+            <Image src="/images/moon.svg" alt="logo" height={30} width={30} />
+          )}
+        </button>
       </nav>
-    </header>
+    </section>
   );
 };
 
