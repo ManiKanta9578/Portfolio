@@ -1,10 +1,8 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import { useTheme } from "next-themes";
-
-const systemTheme = "dark";
 
 const CustomLink = ({ href, title, className = "" }) => {
   return (
@@ -18,8 +16,14 @@ const CustomLink = ({ href, title, className = "" }) => {
 };
 
 const Navbar1 = () => {
-  const { theme, setTheme } = useTheme();
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (

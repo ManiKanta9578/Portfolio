@@ -13,11 +13,11 @@ const Project = ({
   gitIcon,
 }) => {
   return (
-    <section className="w-full h-[60vh] flex flex-col relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-6 lg:p-8 dark:bg-dark dark:border-light sm:rounded-2xl sm:rounded-br-2xl text-dark dark:text-light border-r-8 border-b-8">
+    <section className="w-full h-[60vh] grid grid-rows-6 relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-6 lg:p-8 dark:bg-dark dark:border-light sm:rounded-2xl sm:rounded-br-2xl text-dark dark:text-light border-r-8 border-b-8">
       <Link
         href={previewUrl}
         target="_blank"
-        className="w-full h-full cursor-pointer overflow-hidden rounded-lg mb-6 lg:mb-0 lg:mr-6"
+        className="w-full h-full row-span-4 cursor-pointer overflow-hidden rounded-lg mb-6 lg:mb-0 lg:mr-6"
       >
         <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
           <Image
@@ -30,7 +30,7 @@ const Project = ({
         </motion.div>
       </Link>
 
-      <div className="w-full h-full lg:h-full flex flex-col items-start justify-end">
+      <div className="w-full h-full lg:h-full row-span-2 flex flex-col items-start justify-center">
         <span className="text-primary-300 font-medium text-lg lg:text-xl">
           {type}
         </span>
