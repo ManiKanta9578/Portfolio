@@ -1,7 +1,7 @@
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const montSerrat = Montserrat({ subsets: ['latin'], variable: "-font-mont" })
 
 export const metadata = {
   title: 'Portfolio',
@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={montSerrat.className}>{children}</body>
     </html>
   )
 }

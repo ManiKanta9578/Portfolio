@@ -28,7 +28,6 @@ const FeaturedProject = ({
             className="h-auto w-full rounded-lg"
             width={500}
             height={500}
-            layout="responsive"
           />
         </motion.div>
       </Link>

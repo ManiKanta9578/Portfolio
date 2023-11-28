@@ -32,7 +32,7 @@ const AchievementsSection = () => {
         {achievementsList.map((achievement, index) => (
           <div
             key={index}
-            className="rounded-md py-4 px-3 text-center flex flex-col"
+            className="rounded-md py-4 px-1 text-center flex flex-col"
           >
             <h2 className="text-dark dark:text-light inline-block text-2xl font-bold md:text-4xl sm:text-4xl xs:text-4xl">
               {achievement.prefix}
