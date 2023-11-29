@@ -50,6 +50,7 @@ const projectsData = [
 const Projects = () => {
   return (
     <section className="w-full" id="projects">
+      <br></br>
       <div className="dark:text-light text-dark font-semibold">
         <h2 className="mb-16 mt-16 lg:!text-7xl sm:mb-8 sm:!text-6xl text-4xl text-center">
           Imagination Trump <br /> Knowledge!

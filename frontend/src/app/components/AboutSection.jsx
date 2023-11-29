@@ -51,7 +51,10 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="text-dark dark:text-light">
+    <section id="about" className="text-dark dark:text-light ">
+      <br></br>
+      <br></br>
+      <br></br>
       <div>
         <h2 className="font-bold text-4xl w-full text-center md:text-6xl text-dark dark:text-light mb-1">About Me</h2>
         <div className="md:grid md:grid-cols-5 gap-8 items-center justify-start py-8 px-4 xl:gap-16 xl:px-16 h-full">

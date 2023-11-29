@@ -105,8 +105,8 @@ const Experience = () => {
             key={index}
             variants={cardVariants}
             initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
+            whileInView="animate"
+            transition={{ duration: 0.3, delay: index * 0.3 }}
           >
             <Details
               position={experience.position}

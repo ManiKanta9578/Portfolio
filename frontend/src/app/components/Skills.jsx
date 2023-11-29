@@ -49,9 +49,9 @@ const Skills = () => {
         <Skill name="ReactJs" x="0vw" y="12vw" />
         <Skill name="NextJS" x="-11vw" y="-19vw" />
         <Skill name="NodeJS" x="-17vw" y="11vw" />
-        <Skill name="MongoDB" x="-34vw" y="5vw" />
+        <Skill name="MongoDB" x="-26vw" y="5vw" />
         <Skill name="Express" x="-16vw" y="-1vw" />
-        <Skill name="Mongoose" x="-36vw" y="-10vw" />
+        <Skill name="Mongoose" x="-28vw" y="-10vw" />
         <Skill name="Redux" x="30vw" y="-15vw" />
         <Skill name="Figma" x="10vw" y="-13vw" />
         <Skill name="Material UI" x="20vw" y="5vw" />

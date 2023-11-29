@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { ThemeProvider } from "next-themes";
 import AboutSection from "./components/AboutSection";
 import AchievementsSection from "./components/AchievementsSection";
@@ -15,8 +15,8 @@ import Skills from "./components/Skills";
 export default function Home() {
   return (
     <ThemeProvider enableSystem={true} attribute="class">
+      <Navbar1 />
       <main className="flex min-h-screen flex-col bg-light dark:bg-dark mx-auto px-12 py-4">
-        <Navbar1 />
         {/* <Navbar /> */}
         <div className="container mt-24 mx-auto px-4">
           <Herosection />
