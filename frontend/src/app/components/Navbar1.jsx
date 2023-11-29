@@ -61,7 +61,7 @@ const Navbar1 = () => {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <nav className="w-full flex items-center justify-between fixed px-6 py-3 lg:px-32 z-10 font-medium text-dark dark:text-light dark:bg-dark top-0 bg-light">
+    <nav className="w-full flex items-center justify-between fixed px-6 py-3 lg:px-32 z-10 font-medium text-dark dark:text-light dark:bg-dark/90 top-0 bg-light/90">
       <MotionLink
         href={"/"}
         className="w-12 h-12 dark:text-light text-dark text-2xl font-bold dark:border-light border-dark border rounded-full flex items-center justify-center mb-4 md:mb-0 md:mr-4"
@@ -137,7 +137,7 @@ const Navbar1 = () => {
               onClick={() =>
                 setTheme(currentTheme === "dark" ? "light" : "dark")
               }
-              className="md:ml-4"
+              className="md:ml-4  p-1 bg-light dark:bg-dark rounded-full"
             >
               {currentTheme === "dark" ? (
                 <motion.div

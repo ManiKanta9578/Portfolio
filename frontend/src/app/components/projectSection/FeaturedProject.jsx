@@ -49,7 +49,7 @@ const FeaturedProject = ({
           {summary}
         </p>
         <div className="mt-2 flex flex-row items-center justify-center lg:flex-row lg:items-center">
-          <Link href={gitUrl} target="_blank" className="w-10 mr-4">
+          <Link href={gitUrl} target="_blank" className="w-10 mr-4 border rounded-full border-dark p-1 dark:border-light dark:bg-light">
             <Image src={gitIcon} alt="Github" width={50} height={50} />
           </Link>
           <Link

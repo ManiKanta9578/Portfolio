@@ -54,7 +54,7 @@ const Project = ({
           >
             Visit
           </Link>
-          <Link href={gitUrl} target="_blank" className="w-10">
+          <Link href={gitUrl} target="_blank" className=" w-10 border rounded-full border-dark p-1 dark:border-light dark:bg-light">
             <Image src={gitIcon} alt="Github" width={50} height={50} />
           </Link>
         </div>

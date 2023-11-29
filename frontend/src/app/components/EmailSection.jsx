@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import GithubIcon from "../../../public/images/github.svg";
+import GithubIcon from "../../../public/images/github.png";
 import LinkedInIcon from "../../../public/images/linkedin.svg";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -45,14 +45,15 @@ const EmailSection = () => {
           Whether you have a question or just want to say hi, I'll try my best
           to get back to you!
         </p>
-        <div className="socials flex flex-row gap-2">
+        <div className="socials flex flex-row items-center gap-2 h-8">
           <motion.a
             href="https://github.com/ManiKanta9578/"
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
+            className="bg-light flex items-end justify-center border rounded-full border-dark p-1 dark:border-light dark:bg-light"
           >
-            <Image src={GithubIcon} alt="Github Icon" />
+            <Image src={GithubIcon} alt="Github Icon" width={30} height={30}/>
           </motion.a>
           <motion.a
             href="https://www.linkedin.com/in/mani-kanta-kotni"

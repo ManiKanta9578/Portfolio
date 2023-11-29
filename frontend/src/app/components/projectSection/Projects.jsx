@@ -19,7 +19,7 @@ const projectsData = [
       img: "/images/projects/Reserve-Bus.png",
       gitUrl: "https://github.com/ManiKanta9578/Reserve-Bus.git",
       previewUrl: "https://reserve-bus.netlify.app/",
-      gitIcon: "/images/github.svg",
+      gitIcon: "/images/github.png",
     },
     id: 1,
     cryptocurrency: {
@@ -30,7 +30,7 @@ const projectsData = [
       img: "/images/projects/CryptoDashboard.png",
       gitUrl: "https://github.com/ManiKanta9578/Cryptocurrency_Dashboard.git",
       previewUrl: "https://cryptocurrencydashboard.netlify.app/",
-      gitIcon: "/images/github.svg",
+      gitIcon: "/images/github.png",
     },
     id: 3,
     youtube: {
@@ -42,7 +42,7 @@ const projectsData = [
       tag: ["All", "Web"],
       gitUrl: "https://github.com/ManiKanta9578/YouTube_Subscribers.git",
       previewUrl: "https://youtube-subscribers-livid.vercel.app/",
-      gitIcon: "/images/github.svg",
+      gitIcon: "/images/github.png",
     },
   },
 ];
