@@ -13,11 +13,11 @@ const Project = ({
   gitIcon,
 }) => {
   return (
-    <section className="w-full h-[60vh] grid grid-rows-6 relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-6 lg:p-8 dark:bg-dark dark:border-light sm:rounded-2xl sm:rounded-br-2xl text-dark dark:text-light border-r-8 border-b-8">
+    <section className="w-full relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-4 lg:p-6 dark:bg-dark dark:border-light sm:rounded-2xl sm:rounded-br-2xl text-dark dark:text-light border-r-4 border-b-4 md:border-r-8 md:border-b-8">
       <Link
         href={previewUrl}
         target="_blank"
-        className="w-full h-full row-span-4 cursor-pointer overflow-hidden rounded-lg mb-6 lg:mb-0 lg:mr-6"
+        className="w-full h-60 sm:h-[60vh] md:h-full row-span-4 cursor-pointer overflow-hidden rounded-lg mb-4 md:mb-0 md:mr-6"
       >
         <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
           <Image
@@ -31,7 +31,7 @@ const Project = ({
       </Link>
 
       <div className="w-full h-full lg:h-full row-span-2 flex flex-col items-start justify-center">
-        <span className="text-primary-300 font-medium text-lg lg:text-xl">
+        <span className="text-primary-300 font-medium text-base md:text-lg lg:text-xl">
           {type}
         </span>
         <Link
@@ -39,23 +39,29 @@ const Project = ({
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-xl md:text-xl lg:text-2xl xl:text-2xl font-bold">
+          <h2 className="my-2 w-full text-left text-base md:text-lg lg:text-2xl xl:text-2xl font-bold">
             {title}
           </h2>
         </Link>
         {/* {summary && (
-          <p className="my-2 font-medium text-base lg:text-light">{summary}</p>
+          <p className="my-2 font-medium text-sm md:text-base lg:text-lg">
+            {summary}
+          </p>
         )} */}
         <div className="w-full mt-2 flex flex-row items-center justify-between">
           <Link
             href={previewUrl}
             target="_blank"
-            className="rounded-lg text-dark dark:text-light underline text-lg md:text-lg lg:text-xl xl:text-xl font-semibold "
+            className="rounded-lg text-dark dark:text-light underline text-base md:text-lg lg:text-xl xl:text-xl font-semibold "
           >
             Visit
           </Link>
-          <Link href={gitUrl} target="_blank" className=" w-10 border rounded-full border-dark p-1 dark:border-light dark:bg-light">
-            <Image src={gitIcon} alt="Github" width={50} height={50} />
+          <Link
+            href={gitUrl}
+            target="_blank"
+            className="w-8 h-8 border rounded-full border-dark p-1 dark:border-light dark:bg-light"
+          >
+            <Image src={gitIcon} alt="Github" width={32} height={32} />
           </Link>
         </div>
       </div>
