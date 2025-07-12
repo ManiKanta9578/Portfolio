@@ -4,9 +4,10 @@ import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 import { ChevronDown, Menu, X, Github, Linkedin, Mail, ExternalLink, Download, Code, Palette, Zap, Users, Award, Calendar, MapPin, Building2, Sun, Moon } from 'lucide-react'
 
 export default function ModernPortfolio() {
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true)
   const { scrollYProgress } = useScroll()
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1])
 
@@ -187,20 +188,21 @@ export default function ModernPortfolio() {
                 {item.label}
               </motion.a>
             ))}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className={`p-2 rounded-lg ${isDarkMode ? 'bg-gray-800 text-yellow-400' : 'bg-gray-100 text-gray-700'
-                }`}
-            >
-              {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
-            </motion.button>
           </div>
 
           <motion.button
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="md:hidden p-2"
+            onClick={() => setIsDarkMode(!isDarkMode)}
+            className={`p-2 rounded-lg ${isDarkMode ? 'bg-gray-800 text-yellow-400' : 'bg-gray-100 text-gray-700'
+              }`}
+          >
+            {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
+          </motion.button>
+
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            className={`md:hidden p-2 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-700'} `}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
